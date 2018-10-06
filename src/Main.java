@@ -1,3 +1,4 @@
+import ru.valiullin.Revers;
 import ru.valiullin.ToLeft;
 
 public class Main {
@@ -22,9 +23,10 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        ToLeft.toLeft();
+        //ToLeft.toLeft();
         System.out.println(" =====revers===== ");
-        ToLeft.revers();
+        Revers revers = new Revers();
+        revers.revers();
     }
 
 

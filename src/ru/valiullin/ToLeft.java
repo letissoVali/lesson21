@@ -57,31 +57,16 @@ public class ToLeft {
         System.out.println("====================");
         for (int i = 0; i < sizeToLeft; i++) {
             int temp;
-            for (int j = 0; j < sizeToLeft; j++) {
-
-                if(j == sizeToLeft-1){
-                    //todo 4. Последнему элементу присвоить 0
-                    arrSort[i][j] = 0;
-                } else if(j < sizeToLeft-1) {
-                    //todo 5. В текущую ячейку поместить значение следующей
-                    temp = arrSort[i][j+1];
-                    arrSort[i][j] = temp;
-                }
+            for (int j = 0; j < sizeToLeft-1; j++) {
+                //todo 5. В текущую ячейку поместить значение следующей
+                temp = arrSort[i][j+1];
+                arrSort[i][j] = temp;
                 System.out.print(arrSort[i][j] + " ");
             }
+            arrSort[i][sizeToLeft-1] = 0;
+            System.out.print(arrSort[i][sizeToLeft-1] + " ");
             System.out.print("|");
         }
         System.out.println();
     }
-
-    //TODO Revers
-    public static void revers() {
-        for (int i = 0; i < sizeToLeft; i++) {
-            for (int j = sizeToLeft-1; j >= 0; j--) {
-                System.out.print(arrSort[i][j] + " ");
-            }
-            System.out.print("|");
-        }
-    }
-
 }
